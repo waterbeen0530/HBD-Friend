@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import mainCake from "../components/util/assets/image/mainCake.svg";
-import deco1 from "../components/util/assets/image/deco1.png";
-import deco2 from "../components/util/assets/image/deco2.png";
 
 export default function Main() {
   return (
     <Container>
-      <img id="deco1" src={deco1} alt="" />
-      <img id="deco2" src={deco2} alt="" />
+      <img id="deco1" src="/img/main/deco1.png" alt="" />
+      <img id="deco2" src="/img/main/deco2.png" alt="" />
       <div>
         <h1>
           Happy
@@ -17,7 +14,7 @@ export default function Main() {
         </h1>
         <p>미정쌤 생신 축하드려요!-2022.09.18</p>
       </div>
-      <img src={mainCake} alt="" />
+      <img src="/img/main/mainCake.svg" alt="" />
     </Container>
   );
 }
@@ -36,7 +33,7 @@ const Container = styled.div`
     z-index: 10;
     h1 {
       margin: 0;
-      font-size: 115px;
+      font-size: 100px;
     }
     p {
       font-size: 20px;
@@ -44,7 +41,7 @@ const Container = styled.div`
     }
   }
   img {
-    width: 600px;
+    width: 40%;
     z-index: 10;
   }
   #deco1 {
