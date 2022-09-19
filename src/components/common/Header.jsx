@@ -4,12 +4,13 @@ import styled from "styled-components";
 export default function Header() {
   return (
     <Container>
-      <h2>LOGO</h2>
+      <h2>MZOME</h2>
 
       <div>
-        <p>이미정 일대기</p>
         <p>두근두근편지</p>
+        <p>이미정 일대기</p>
         <p>심리테스트</p>
+        <p>DEVELOPER</p>
       </div>
     </Container>
   );
@@ -22,7 +23,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  color: #fff;
+  background: #343a40;
   z-index: 20;
   h2 {
     padding-left: 70px;
