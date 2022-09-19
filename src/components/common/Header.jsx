@@ -8,8 +8,8 @@ export default function Header() {
 
       <div>
         <p>두근두근편지</p>
-        <p>이미정 일대기</p>
         <p>심리테스트</p>
+        <p>이미정 일대기</p>
         <p>DEVELOPER</p>
       </div>
     </Container>
@@ -38,8 +38,8 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     p {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 500;
       cursor: pointer;
     }
   }

@@ -105,7 +105,7 @@ const Frame = styled.div`
   }
   p {
     margin: 20px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
   }

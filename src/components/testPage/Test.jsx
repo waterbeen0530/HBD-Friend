@@ -89,13 +89,13 @@ const Wrapper = styled.div`
     }
     p {
       position: absolute;
-      bottom: 40px;
+      bottom: 65px;
       font-size: 26px;
       color: #fff;
     }
     span {
       position: absolute;
-      bottom: 30px;
+      bottom: 50px;
     }
   }
   #first {
