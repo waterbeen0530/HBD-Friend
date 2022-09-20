@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import MondPotato from "./MondPtato";
 import Sweetchicken from "./SweetChicken";
@@ -29,16 +30,20 @@ export default function Test() {
         당신의 선택은?
       </p>
       <Wrapper>
-        <div id="first" onClick={onClick1}>
-          <img src={chicken} alt="" />
-          <p>달콤달콤 닭고기 스튜</p>
-          <span>⭐⭐</span>
-        </div>
-        <div id="second" onClick={onClick2}>
-          <img src={potato} alt="" />
-          <p>몬드 감자전</p>
-          <span>⭐⭐⭐</span>
-        </div>
+        <Link to="test" spy={true} smooth={true}>
+          <div id="first" onClick={onClick1}>
+            <img src={chicken} alt="" />
+            <p>달콤달콤 닭고기 스튜</p>
+            <span>⭐⭐</span>
+          </div>
+        </Link>
+        <Link to="test" spy={true} smooth={true}>
+          <div id="second" onClick={onClick2}>
+            <img src={potato} alt="" />
+            <p>몬드 감자전</p>
+            <span>⭐⭐⭐</span>
+          </div>
+        </Link>
       </Wrapper>
       <Sweetchicken view={sweet} food={onClick1} />
       <MondPotato view={mond} food={onClick2} />
