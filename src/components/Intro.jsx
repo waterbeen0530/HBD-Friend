@@ -63,10 +63,10 @@ const Content = styled.div`
   }
   @media (max-width: 500px) {
     .deco1 {
-      width: 80%;
+      width: 70%;
     }
     .deco2 {
-      width: 80%;
+      width: 70%;
     }
   }
 `;

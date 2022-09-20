@@ -58,7 +58,7 @@ const ModalWrap = styled.div`
 const Wrapper = styled.div`
   position: relative;
   width: 95%;
-  height: 90%;
+  height: fit-content;
   border: 3px dashed #ff8787;
   border-radius: 10px;
   display: flex;
