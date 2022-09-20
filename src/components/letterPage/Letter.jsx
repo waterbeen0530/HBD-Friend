@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "./Modal";
+import { Link } from "react-scroll";
 
 export default function Letter() {
   const [modal, setModal] = useState(false);
@@ -8,13 +9,15 @@ export default function Letter() {
     setModal((pre) => !pre);
   };
   return (
-    <Container>
+    <Container id="letter">
       <Wrapper>
         <h1>
           엇, 편지가 왔어요! <br />
           한번 확인해 볼까요?
         </h1>
-        <button onClick={onClick}>확인하기</button>
+        <Link to="letter" spy={true} smooth={true}>
+          <button onClick={onClick}>확인하기</button>
+        </Link>
       </Wrapper>
       <img src="/img/letter/loveLetter.svg" alt="" />
       <Modal view={modal} letter={onClick} />
@@ -24,9 +27,8 @@ export default function Letter() {
 
 const Container = styled.div`
   position: relative;
-
-  width: 100vw;
   height: 100vh;
+  color: #343a40;
   img {
     position: absolute;
     bottom: 0;
@@ -39,7 +41,7 @@ const Wrapper = styled.div`
   position: absolute;
   top: 70px;
   left: 100px;
-  width: 100%;
+  width: 600px;
   h1 {
     margin: 0;
     font-size: 65px;
