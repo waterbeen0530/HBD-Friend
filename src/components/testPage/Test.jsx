@@ -13,14 +13,15 @@ export default function Test() {
   const [sweet, setSweet] = useState(false);
 
   const onClick1 = () => {
-    setMond((pre) => !pre);
+    setSweet((pre) => !pre);
   };
 
   const onClick2 = () => {
-    setSweet((pre) => !pre);
+    setMond((pre) => !pre);
   };
+
   return (
-    <Container>
+    <Container id="test">
       <h2>무근본 심리 테스트</h2>
       <p>
         어느날, 배고픈 당신 앞에 두 가지 음식이 놓이게 되는데..
@@ -39,19 +40,19 @@ export default function Test() {
           <span>⭐⭐⭐</span>
         </div>
       </Wrapper>
-      <MondPotato view={mond} food={onClick1} />
-      <Sweetchicken view={sweet} food={onClick2} />
+      <Sweetchicken view={sweet} food={onClick1} />
+      <MondPotato view={mond} food={onClick2} />
     </Container>
   );
 }
 const Container = styled.div`
-  width: 100vw;
+  position: relative;
   height: 110vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   background: #e9ecef;
-
+  color: #343a40;
   display: flex;
   align-items: center;
   justify-content: center;
