@@ -100,7 +100,8 @@ const Wrapper = styled.div`
       margin-top: 20px;
     }
     img {
-      margin-top: 30px;
+      margin: 0;
+      width: 55%;
     }
   }
 `;

@@ -98,6 +98,7 @@ const Wrapper = styled.div`
 
     span {
       padding: 0 10px;
+      font-size: 16px;
     }
   }
 `;

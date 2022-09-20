@@ -30,12 +30,12 @@ const Container = styled.div`
   color: #fff;
   background: #343a40;
   @media (max-width: 500px) {
-    height: 18vh;
+    height: 25vh;
   }
 `;
 
 const Wrapper = styled.div`
-  width: 80vw;
+  width: 75vw;
   height: 18vh;
   border-bottom: 1px solid #fff;
   display: flex;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   p {
     margin: 0;
-    font-size: 80px;
+    font-size: 72px;
   }
   @media (max-width: 500px) {
     height: 50%;

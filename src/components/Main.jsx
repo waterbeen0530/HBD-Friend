@@ -64,7 +64,6 @@ const Container = styled.div`
       z-index: 10;
       width: 80%;
       margin-right: -80px;
-      /* margin-bottom: -50px; */
     }
   }
 `;
@@ -84,6 +83,7 @@ const Wrapper = styled.div`
     margin-left: -100px;
     margin-top: 25px;
     h1 {
+      margin-left: 15px;
       font-size: 50px;
     }
     p {

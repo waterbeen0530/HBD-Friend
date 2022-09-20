@@ -15,7 +15,7 @@ export default function MondPotato({ view, food }) {
               당신은 '몬드 감자전'을 먹고 탄수화물 중독에
               걸렸습니다.(+셀룰라이트 기여)
             </span>
-            <img src="/img/test/cocaloopy.png" alt="" />
+            <img src="/img/test/loopy.png" alt="" />
             <button onClick={food}>✖</button>
           </Wrapper>
         </Modal>
@@ -110,8 +110,8 @@ const Wrapper = styled.div`
       margin-top: 20px;
     }
     img {
-      width: 60%;
-      margin-top: 30px;
+      margin: 0;
+      width: 55%;
     }
   }
 `;

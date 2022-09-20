@@ -78,8 +78,8 @@ const Container = styled.div`
       font-size: 30px;
     }
     & > p {
-      width: 250px;
-      margin-bottom: 70px;
+      width: 270px;
+      margin-bottom: 20px;
       font-size: 18px;
     }
   }
