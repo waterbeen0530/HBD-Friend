@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Footer() {
   return (
-    <Container>
+    <Container id="footer">
       <Wrapper>
         <p>HBD-MIJEONG</p>
         <div>
@@ -12,7 +12,7 @@ export default function Footer() {
           <a href="https://www.instagram.com/subin_253/">
             <img src="/img/footer/instagram.png" alt="" />
           </a>
-          <a href="https://github.com/waterbeen0530">
+          <a href="https://github.com/waterbeen0530/HBD-Friend">
             <img src="/img/footer/github.png" alt="" />
           </a>
         </div>
@@ -23,7 +23,6 @@ export default function Footer() {
 
 const Container = styled.div`
   position: relative;
-  width: 100vw;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -38,12 +37,18 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #fff;
   display: flex;
   align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+  div {
+    gap: 3px;
+    display: flex;
+    margin-bottom: 20px;
+  }
   p {
     margin: 0;
     font-size: 80px;
   }
   img {
-    width: 20%;
+    width: 60%;
   }
 `;
