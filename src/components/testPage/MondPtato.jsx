@@ -107,11 +107,11 @@ const Wrapper = styled.div`
     }
     span {
       width: 260px;
-      margin-top: 20px;
+      margin: 0;
     }
     img {
       margin: 0;
-      width: 55%;
+      width: 50%;
     }
   }
 `;

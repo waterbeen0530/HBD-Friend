@@ -75,7 +75,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 500px) {
     left: 0;
-    margin: 60px 0 0 30px;
+    margin: 20px 0 0 30px;
     h1 {
       font-size: 30px;
     }
