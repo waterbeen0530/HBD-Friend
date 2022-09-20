@@ -5,7 +5,7 @@ export default function MondPotato({ view, food }) {
     view && (
       <Container>
         <Modal>
-          <div>
+          <Wrapper>
             <p>
               당신은 '몬드 감자전'을
               <br />
@@ -17,7 +17,7 @@ export default function MondPotato({ view, food }) {
             </span>
             <img src="/img/test/cocaloopy.png" alt="" />
             <button onClick={food}>✖</button>
-          </div>
+          </Wrapper>
         </Modal>
       </Container>
     )
@@ -35,6 +35,13 @@ const Container = styled.div`
   align-items: center;
   background-color: #20202060;
   text-align: center;
+  @media (max-width: 500px) {
+    width: 100vw;
+    height: 100vh;
+    p {
+      margin: 0;
+    }
+  }
 `;
 
 const Modal = styled.div`
@@ -45,39 +52,66 @@ const Modal = styled.div`
   justify-content: center;
   border-radius: 20px;
   background-color: #fff5f5;
-  div {
-    position: relative;
-    width: 95%;
-    height: 92%;
-    border: 3px dashed #ff8787;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: #343a40;
+  @media (max-width: 500px) {
+    width: 90%;
+    height: 50%;
     p {
-      font-size: 24px;
+      margin: 0;
+    }
+  }
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 95%;
+  height: 92%;
+  border: 3px dashed #ff8787;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #343a40;
+  p {
+    width: 530px;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+  }
+  span {
+    font-size: 14px;
+  }
+  button {
+    position: absolute;
+    top: 3.5px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    border-radius: 20px;
+    border: none;
+    font-size: 22px;
+    color: #343a40;
+    background: #fff5f5;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  img {
+    width: 37%;
+  }
+  @media (max-width: 500px) {
+    height: 95%;
+    p {
+      width: 220px;
+      font-size: 17px;
+      margin: 20px 0 0 0;
     }
     span {
-      font-size: 14px;
-    }
-    button {
-      position: absolute;
-      top: 3.5px;
-      right: 5px;
-      width: 32px;
-      height: 32px;
-      margin: 0;
-      border-radius: 20px;
-      border: none;
-      font-size: 22px;
-      color: #343a40;
-      background: #fff5f5;
-      transition: all 0.4s;
-      cursor: pointer;
+      width: 260px;
+      margin-top: 20px;
     }
     img {
-      width: 37%;
+      width: 60%;
+      margin-top: 30px;
     }
   }
 `;

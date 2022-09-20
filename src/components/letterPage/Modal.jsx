@@ -6,7 +6,7 @@ const Modal = ({ view, letter }) => {
     view && (
       <Container>
         <ModalWrap className={styles.loveLetter}>
-          <div>
+          <Wrapper>
             <p>To. 미정쌤💕</p>
             <span>
               미정쌤 생신 정말 축하드려요..!!!! <br /> 어떤 선물을 드릴지 수많은
@@ -19,7 +19,7 @@ const Modal = ({ view, letter }) => {
               2022.09.18 <br /> -임수빈 올림-
             </span>
             <button onClick={letter}>✖</button>
-          </div>
+          </Wrapper>
         </ModalWrap>
       </Container>
     )
@@ -36,6 +36,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media (max-width: 500px) {
+    width: 100vw;
+  }
 `;
 
 const ModalWrap = styled.div`
@@ -46,41 +49,55 @@ const ModalWrap = styled.div`
   justify-content: center;
   border-radius: 10px;
   background-color: #fff5f5;
-  div {
-    position: relative;
-    width: 95%;
-    height: 90%;
-    border: 3px dashed #ff8787;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    p {
-      margin: 15px 0;
-      font-size: 22px;
-      font-weight: 600;
-      color: #343a40;
-    }
+  @media (max-width: 500px) {
+    width: 290px;
+    height: 470px;
+  }
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 95%;
+  height: 90%;
+  border: 3px dashed #ff8787;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  p {
+    margin: 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #343a40;
+  }
+  span {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: #343a40;
+  }
+  button {
+    position: absolute;
+    top: 3.5px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    margin-top: 0;
+    border-radius: 20px;
+    border: none;
+    font-size: 22px;
+    color: #343a40;
+    background: #fff5f5;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+
+  @media (max-width: 500px) {
+    width: 90%;
+    height: 94%;
+
     span {
-      margin: 0;
-      font-size: 19px;
-      font-weight: 600;
-      color: #343a40;
-    }
-    button {
-      position: absolute;
-      top: 3.5px;
-      right: 5px;
-      width: 32px;
-      height: 32px;
-      margin-top: 0;
-      border-radius: 20px;
-      border: none;
-      font-size: 22px;
-      color: #343a40;
-      background: #fff5f5;
-      transition: all 0.4s;
-      cursor: pointer;
+      padding: 0 10px;
     }
   }
 `;

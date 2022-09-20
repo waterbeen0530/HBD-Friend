@@ -6,12 +6,12 @@ export default function Intro() {
     {
       title: "응애 시절",
       text: "유난히 내성적이었던 어린 미정쌤",
-      src: "/img/Intro/mzome.jpg",
+      src: "/img/Intro/babe.jpg",
     },
     {
       title: "칼바람 시절",
       text: "범상치 않은 학창 시절을 보낸 미정쌤",
-      src: "/img/Intro/mzome.jpg",
+      src: "/img/Intro/knife.jpg",
     },
     {
       title: "현재 모습",
@@ -27,10 +27,11 @@ export default function Intro() {
       <p>{list.text}</p>
     </Frame>
   ));
+
   return (
     <Content id="life">
-      <img id="deco1" src="/img/Intro/deco1.svg" alt="" />
-      <img id="deco2" src="/img/Intro/deco2.svg" alt="" />
+      <img className="deco1" src="/img/Intro/deco1.svg" alt="" />
+      <img className="deco2" src="/img/Intro/deco2.svg" alt="" />
       <Container>
         <h1>이미정 일대기</h1>
         <Wrapper>{portList}</Wrapper>
@@ -46,19 +47,27 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
   color: #343a40;
-  #deco1 {
+  .deco1 {
     position: absolute;
     top: 0;
     right: 0;
     width: 35%;
     z-index: 5;
   }
-  #deco2 {
+  .deco2 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 35%;
     z-index: 5;
+  }
+  @media (max-width: 500px) {
+    .deco1 {
+      width: 80%;
+    }
+    .deco2 {
+      width: 80%;
+    }
   }
 `;
 
@@ -71,6 +80,13 @@ const Container = styled.div`
     font-weight: 900;
     margin-bottom: 30px;
   }
+  @media (max-width: 500px) {
+    gap: 80px;
+    margin-top: -90px;
+    h1 {
+      z-index: 10;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
@@ -82,6 +98,10 @@ const Wrapper = styled.div`
   justify-content: center;
   img {
     width: 50%;
+  }
+
+  @media (max-width: 500px) {
+    gap: 10px;
   }
 `;
 
@@ -98,7 +118,7 @@ const Frame = styled.div`
     width: 100%;
     padding: 60px 0 0;
   }
-  h2 {
+  & > h2 {
     margin: 25px 0 10px 0;
     font-size: 30px;
     text-align: center;
@@ -108,5 +128,28 @@ const Frame = styled.div`
     font-size: 16px;
     font-weight: 600;
     text-align: center;
+  }
+  @media (max-width: 500px) {
+    width: 120px;
+    border-radius: 10px;
+    img {
+      padding-top: 30px;
+    }
+    h2 {
+      margin: 10px 0 0 0;
+      font-size: 18px;
+    }
+    p {
+      margin: 5px 20px;
+      font-size: 10px;
+    }
+
+    &:first-child {
+      margin-top: -170px;
+    }
+
+    &:last-child {
+      margin-bottom: -170px;
+    }
   }
 `;

@@ -5,7 +5,7 @@ export default function Footer() {
     <Container id="footer">
       <Wrapper>
         <p>HBD-MIJEONG</p>
-        <div>
+        <Frame>
           <a href="https://www.facebook.com/profile.php?id=100064560693847">
             <img src="/img/footer/facebook.png" alt="" />
           </a>
@@ -15,7 +15,7 @@ export default function Footer() {
           <a href="https://github.com/waterbeen0530/HBD-Friend">
             <img src="/img/footer/github.png" alt="" />
           </a>
-        </div>
+        </Frame>
       </Wrapper>
     </Container>
   );
@@ -29,6 +29,9 @@ const Container = styled.div`
   justify-content: center;
   color: #fff;
   background: #343a40;
+  @media (max-width: 500px) {
+    height: 18vh;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -39,16 +42,38 @@ const Wrapper = styled.div`
   align-items: center;
   align-items: flex-end;
   justify-content: space-between;
-  div {
-    gap: 3px;
-    display: flex;
-    margin-bottom: 20px;
-  }
   p {
     margin: 0;
     font-size: 80px;
   }
+  @media (max-width: 500px) {
+    height: 50%;
+    margin-bottom: -20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    p {
+      margin: 0;
+      font-size: 40px;
+    }
+  }
+`;
+
+const Frame = styled.div`
+  gap: 3px;
+  display: flex;
+  margin-bottom: 20px;
   img {
     width: 60%;
+  }
+  @media (max-width: 500px) {
+    gap: 20px;
+    margin: 0;
+    a {
+      width: 30px;
+    }
+    img {
+      width: 100%;
+    }
   }
 `;

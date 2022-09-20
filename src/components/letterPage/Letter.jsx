@@ -35,18 +35,25 @@ const Container = styled.div`
     right: 20px;
     width: 40%;
   }
+  @media (max-width: 500px) {
+    img {
+      margin: 0 -10px 100px 0;
+      width: 70%;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
   position: absolute;
   top: 70px;
   left: 100px;
-  width: 600px;
+
   h1 {
     margin: 0;
     font-size: 65px;
     font-weight: 900;
   }
+
   button {
     width: 160px;
     height: 42px;
@@ -59,9 +66,19 @@ const Wrapper = styled.div`
     background: #fa5252;
     transition: all 0.4s;
     cursor: pointer;
+
+    &:hover {
+      background: #495057;
+      border: #adb5bd 1px solid;
+    }
   }
-  button:hover {
-    background: #495057;
-    border: #adb5bd 1px solid;
+
+  @media (max-width: 500px) {
+    /* top:0; */
+    left: 0;
+    margin: 90px 0 0 30px;
+    h1 {
+      font-size: 30px;
+    }
   }
 `;

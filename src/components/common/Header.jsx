@@ -9,7 +9,7 @@ export default function Header() {
         <h2>MZOME</h2>
       </Link>
 
-      <div>
+      <Wrapper>
         <Link to="letter" spy={true} smooth={true}>
           <p>두근두근편지</p>
         </Link>
@@ -22,7 +22,7 @@ export default function Header() {
         <Link to="footer" spy={true} smooth={true}>
           <p>DEVELOPER</p>
         </Link>
-      </div>
+      </Wrapper>
     </Container>
   );
 }
@@ -42,16 +42,40 @@ const Container = styled.div`
     font-size: 30px;
     cursor: pointer;
   }
-  div {
-    width: 500px;
-    padding-right: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    p {
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
+
+  @media (max-width: 500px) {
+    h2 {
+      padding-left: 15px;
+      font-size: 16px;
+    }
+  }
+`;
+const Wrapper = styled.div`
+  /* width: 500px; */
+  padding-right: 70px;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+  & > a > p {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: 0.2s;
+    &:active {
+      color: #bac8ff;
+    }
+  }
+
+  @media (max-width: 500px) {
+    /* width: 250px; */
+    gap: 10px;
+    padding-right: 15px;
+
+    & > a > p {
+      white-space: nowrap;
+      font-size: 0.1px;
     }
   }
 `;

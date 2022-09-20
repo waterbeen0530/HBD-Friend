@@ -31,18 +31,18 @@ export default function Test() {
       </p>
       <Wrapper>
         <Link to="test" spy={true} smooth={true}>
-          <div id="first" onClick={onClick1}>
+          <First onClick={onClick1}>
             <img src={chicken} alt="" />
             <p>달콤달콤 닭고기 스튜</p>
             <span>⭐⭐</span>
-          </div>
+          </First>
         </Link>
         <Link to="test" spy={true} smooth={true}>
-          <div id="second" onClick={onClick2}>
+          <Second onClick={onClick2}>
             <img src={potato} alt="" />
             <p>몬드 감자전</p>
             <span>⭐⭐⭐</span>
-          </div>
+          </Second>
         </Link>
       </Wrapper>
       <Sweetchicken view={sweet} food={onClick1} />
@@ -65,11 +65,23 @@ const Container = styled.div`
     margin: 0 0 10px;
     font-size: 50px;
   }
-  p {
+  & > p {
     margin: 10px 0 10px 0;
     font-size: 28px;
     font-weight: 700;
     text-align: center;
+  }
+  @media (max-width: 500px) {
+    height: 100vh;
+    h2 {
+      margin-top: 50px;
+      font-size: 30px;
+    }
+    & > p {
+      width: 250px;
+      margin-bottom: 70px;
+      font-size: 18px;
+    }
   }
 `;
 
@@ -79,45 +91,102 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  div {
-    position: relative;
-    width: 470px;
-    height: 470px;
-    border-radius: 300px;
+  @media (max-width: 500px) {
+    gap: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    img {
-      width: 50%;
-      margin-bottom: 45px;
-      border: 5px solid #fff;
-      border-radius: 20px;
-    }
-    p {
-      position: absolute;
-      bottom: 65px;
-      font-size: 26px;
-      color: #fff;
-    }
-    span {
-      position: absolute;
-      bottom: 50px;
-    }
+    flex-direction: column;
   }
-  #first {
-    background: #ff5e5e;
-    transition: all 0.4s;
-  }
-  #first:hover {
+`;
+
+const First = styled.div`
+  position: relative;
+  width: 470px;
+  height: 470px;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff5e5e;
+  transition: all 0.4s;
+  &:hover {
     background: #f03e3e;
     cursor: pointer;
   }
-  #second {
-    background-color: #495057;
-    transition: all 0.4s;
+  img {
+    width: 50%;
+    margin-bottom: 45px;
+    border: 5px solid #fff;
+    border-radius: 20px;
   }
-  #second:hover {
+  p {
+    position: absolute;
+    bottom: 65px;
+    font-size: 26px;
+    color: #fff;
+  }
+  span {
+    position: absolute;
+    bottom: 50px;
+  }
+  @media (max-width: 500px) {
+    width: 220px;
+    height: 220px;
+    p {
+      position: absolute;
+      bottom: 42px;
+      margin: 0;
+      font-size: 15px;
+    }
+    span {
+      position: absolute;
+      bottom: 18px;
+    }
+  }
+`;
+
+const Second = styled.div`
+  position: relative;
+  width: 470px;
+  height: 470px;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #495057;
+  transition: all 0.4s;
+  &:hover {
     background-color: #343a40;
     cursor: pointer;
+  }
+  img {
+    width: 50%;
+    margin-bottom: 45px;
+    border: 5px solid #fff;
+    border-radius: 20px;
+  }
+  p {
+    position: absolute;
+    bottom: 65px;
+    font-size: 26px;
+    color: #fff;
+  }
+  span {
+    position: absolute;
+    bottom: 50px;
+  }
+  @media (max-width: 500px) {
+    width: 220px;
+    height: 220px;
+    p {
+      position: absolute;
+      bottom: 42px;
+      margin: 0;
+      font-size: 15px;
+    }
+    span {
+      position: absolute;
+      bottom: 18px;
+    }
   }
 `;
