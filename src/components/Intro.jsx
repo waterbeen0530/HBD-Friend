@@ -28,7 +28,7 @@ export default function Intro() {
     </Frame>
   ));
   return (
-    <Content>
+    <Content id="life">
       <img id="deco1" src="/img/Intro/deco1.svg" alt="" />
       <img id="deco2" src="/img/Intro/deco2.svg" alt="" />
       <Container>
@@ -41,11 +41,11 @@ export default function Intro() {
 
 const Content = styled.div`
   position: relative;
-  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #343a40;
   #deco1 {
     position: absolute;
     top: 0;

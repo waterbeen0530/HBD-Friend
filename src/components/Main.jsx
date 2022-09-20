@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Main() {
   return (
-    <Container>
+    <Container id="main">
       <img id="deco1" src="/img/main/deco1.png" alt="" />
       <img id="deco2" src="/img/main/deco2.png" alt="" />
       <div>
@@ -21,7 +21,6 @@ export default function Main() {
 
 const Container = styled.div`
   position: relative;
-  width: 100vw;
   height: 100vh;
   gap: 150px;
   display: flex;
