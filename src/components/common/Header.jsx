@@ -1,16 +1,27 @@
 import React from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 export default function Header() {
   return (
     <Container>
-      <h2>MZOME</h2>
+      <Link to="main" spy={true} smooth={true}>
+        <h2>MZOME</h2>
+      </Link>
 
       <div>
-        <p>두근두근편지</p>
-        <p>심리테스트</p>
-        <p>이미정 일대기</p>
-        <p>DEVELOPER</p>
+        <Link to="letter" spy={true} smooth={true}>
+          <p>두근두근편지</p>
+        </Link>
+        <Link to="test" spy={true} smooth={true}>
+          <p>심리테스트</p>
+        </Link>
+        <Link to="life" spy={true} smooth={true}>
+          <p>이미정 일대기</p>
+        </Link>
+        <Link to="footer" spy={true} smooth={true}>
+          <p>DEVELOPER</p>
+        </Link>
       </div>
     </Container>
   );
