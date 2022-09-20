@@ -98,7 +98,7 @@ const Wrapper = styled.div`
 
     span {
       padding: 0 10px;
-      font-size: 18px;
+      font-size: 19px;
     }
   }
 `;
